@@ -22,6 +22,7 @@ document.querySelector('.again').addEventListener('click',function(){
     document.querySelector('.number').textContent = '?';
     document.querySelector('body').style.backgroundColor= 'black';
     document.querySelector('.score').textContent = 20;
+    score =20;
     document.querySelector('.guess').value = '';
     document.querySelector('.message').textContent = 'Start guessing...';
 
@@ -45,3 +46,22 @@ if(!guess){
     document.querySelector('.message').textContent = 'Correct Number';
 
     if(score > highScore)
+    document.querySelector('.highscore').textContent = score;
+   // when guess is too high
+}else if(guess !== secretNumber){
+    if(score > 0){
+
+        document.querySelector('.message').textContent = guess > secretNumber?'Too High!': 'Too Low!';
+        score--;
+        document.querySelector('.score').textContent = score;
+    }
+    }else{
+        document.querySelector('.message').textContent = 'You Lost the game!';
+    }
+    
+})
+
+
+
+
+
