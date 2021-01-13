@@ -47,7 +47,7 @@ if(!guess){
 
     if(score > highScore)
     document.querySelector('.highscore').textContent = score;
-   // when guess is too high
+   // when guess is not egual
 }else if(guess !== secretNumber){
     if(score > 0){
 
